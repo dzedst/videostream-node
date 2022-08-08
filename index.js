@@ -1,9 +1,13 @@
 import http from "http";
 import { sendHomePage } from "./senders/send-home-page.js";
+import { sendImage } from "./senders/send-image.js"
+import { sendVideo } from "./senders/send-video.js";
 
 
 const getExecuterByUrl = {
-    "/": sendHomePage
+    "/": sendHomePage,
+    "/everything.png": sendImage,
+    "/stream": sendVideo
 }
 
 const router = (req, res) => {
