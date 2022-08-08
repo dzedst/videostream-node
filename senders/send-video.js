@@ -7,7 +7,6 @@ export const sendVideo = (req, res) => {
     const videoFilePath = resolve('./public/videos/everything.mp4')
     const fileSize = statSync(videoFilePath).size;
     const range = req.headers.range;
-    console.log(range);
 
     return !range ? 
         createVideoStream({

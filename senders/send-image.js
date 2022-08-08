@@ -3,7 +3,6 @@ import { join } from "path";
 import { pipeline } from "stream";
 import { fileURLToPath } from "url";
 
-
 export const sendImage = (req, res) => {
     const imageUrl = req.url;
     const __dirname = fileURLToPath(new URL(".", import.meta.url));
